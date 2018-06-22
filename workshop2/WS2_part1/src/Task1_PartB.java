@@ -1,15 +1,41 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Task1_PartA
+public class Task1_PartB
 {
 
-//    static String[] words = { "need", "caffeine", "drink", "java", "seneca", "compile", "android", "apple", "visual",
-//	    "studio", "eclipse", "code", "hello", "world", "thinkpad", "macbook" };
-    static String[] words = { "hello", "macbook", "java" };
+    static ArrayList<String> words = new ArrayList<>();
+
     static boolean isCorrect;
 
     public static void main(String[] args)
     {
+
+	// getting file
+	File filename = new File("hangman.txt");
+	if (!filename.exists())
+	{
+	    System.out.println(filename.getAbsolutePath());
+	    System.out.println(filename + " does not exist.");
+	    System.exit(1);
+	}
+	// reading word file
+	try
+	{
+	    Scanner input = new Scanner(filename);
+	    while (input.hasNext())
+	    {
+		words.add(input.next());
+	    }
+	    input.close();
+	} catch (FileNotFoundException ex)
+	{
+	    ex.printStackTrace();
+	}
+	// debug: display words
+	// System.out.println(words);
 
 	Scanner input = new Scanner(System.in);
 	String playStats = "y";
@@ -51,7 +77,7 @@ public class Task1_PartA
 
     public static String getWord()
     {
-	return words[(int) (Math.random()*words.length)];
+	return words.get((int) (Math.random() * words.size()));
     }
 
     public static String getHiddenWord(String word)
@@ -76,7 +102,7 @@ public class Task1_PartA
 	    if (ch == word.charAt(i) && s.charAt(i) == '*')
 	    {
 		isCorrect = true;
-		//s = s.deleteCharAt(i);
+		s = s.deleteCharAt(i);
 		s = s.insert(i, ch);
 	    }
 	}
