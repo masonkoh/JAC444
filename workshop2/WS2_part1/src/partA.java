@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class partA
 {
 
-    static String[] words = { "programming", "words", "test", "game" };
+    static String[] words = { "need", "caffeine", "drink", "java", "seneca", "compile", "android", "apple", "visual",
+	    "studio", "eclipse", "code", "hello", "world", "thinkpad", "macbook" };
     static boolean isCorrect;
 
     public static void main(String[] args)
