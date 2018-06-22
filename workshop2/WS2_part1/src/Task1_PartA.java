@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Task1
+public class Task1_PartA
 {
 
     static String[] words = { "need", "caffeine", "drink", "java", "seneca", "compile", "android", "apple", "visual",
