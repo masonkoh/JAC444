@@ -1,3 +1,26 @@
+/**********************************************
+
+Workshop #2
+
+Course:<JAC444> - 2018 SUMMER
+
+Last Name:<Ko>
+
+First Name:<Youngmin>
+
+ID:<019155159>
+
+Section:<SAB>
+
+This assignment represents my own work in accordance with Seneca Academic Policy.
+
+Signature
+	Youngmin Ko
+
+Date:<June 22 2018>
+
+**********************************************/
+
 import java.util.Scanner;
 
 public class Task1_PartA
