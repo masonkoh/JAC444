@@ -3,8 +3,9 @@ import java.util.Scanner;
 public class Task1_PartA
 {
 
-//    static String[] words = { "need", "caffeine", "drink", "java", "seneca", "compile", "android", "apple", "visual",
-//	    "studio", "eclipse", "code", "hello", "world", "thinkpad", "macbook" };
+    // static String[] words = { "need", "caffeine", "drink", "java", "seneca",
+    // "compile", "android", "apple", "visual",
+    // "studio", "eclipse", "code", "hello", "world", "thinkpad", "macbook" };
     static String[] words = { "hello", "macbook", "java" };
     static boolean isCorrect;
 
@@ -51,7 +52,7 @@ public class Task1_PartA
 
     public static String getWord()
     {
-	return words[(int) (Math.random()*words.length)];
+	return words[(int) (Math.random() * words.length)];
     }
 
     public static String getHiddenWord(String word)
@@ -76,7 +77,7 @@ public class Task1_PartA
 	    if (ch == word.charAt(i) && s.charAt(i) == '*')
 	    {
 		isCorrect = true;
-		//s = s.deleteCharAt(i);
+		s = s.deleteCharAt(i);
 		s = s.insert(i, ch);
 	    }
 	}
