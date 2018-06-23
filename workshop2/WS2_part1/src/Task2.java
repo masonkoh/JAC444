@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+/*
+ 
+ */
+
 public class Task2
 {
 
@@ -11,11 +15,11 @@ public class Task2
     {
 
 	Scanner input = new Scanner(System.in);
-	// First ask for number of banks and minimum limit
+
 	System.out.print("Enter the number of banks: ");
-	int n = input.nextInt(); // n = number of banks
+	int n = input.nextInt(); // n = No of Banks
 	System.out.print("Enter minimum limit: ");
-	int limit = input.nextInt(); // limit is the minimum total assets for keeping a bank safe
+	int limit = input.nextInt();
 
 	mBanks = new double[n][][];
 
@@ -32,7 +36,7 @@ public class Task2
 	    double balance = input.nextDouble();
 	    int numBanks = input.nextInt();
 	    mBanks[i] = new double[++numBanks][2];
-	    mBanks[i][0][0] = balance; // banks balance
+	    mBanks[i][0][0] = balance;
 
 	    for (int bank = 1; bank < mBanks[i].length; bank++)
 	    {
@@ -58,11 +62,10 @@ public class Task2
 	boolean[] indexUnsafeBanks = new boolean[m.length];
 	double total;
 	boolean isSafe = false;
-	// keep looping until indexUnsafe isn't modified
-	// throw an entire iteration
+
 	while (!isSafe)
 	{
-	    isSafe = true; // gets set false if indexUnsafeBanks is changed
+	    isSafe = true;
 	    for (int banks = 0; banks < m.length; banks++)
 	    {
 		total = m[banks][0][0];
@@ -72,8 +75,7 @@ public class Task2
 		    if (!indexUnsafeBanks[index])
 			total += m[banks][LoanedBanks][LOAN];
 		}
-		// Update indexUnsafeBanks if bank is under limit
-		// and indexUnsafeBanks has not yet marked current bank unsafe
+
 		if (total < limit && !indexUnsafeBanks[banks])
 		{
 		    indexUnsafeBanks[banks] = true;
@@ -102,12 +104,3 @@ public class Task2
     }
 
 }
-
-// Debug:
-// double[][][] debug = new double[][][] {
-// {{25, 0}, {1, 100.5}, {4, 320.5}},
-// {{125, 0}, {2, 40}, {3, 85}},
-// {{175, 0}, {0, 125}, {3, 75}},
-// {{75, 0}, {0, 125}},
-// {{181, 0}, {2, 125}}
-// };
