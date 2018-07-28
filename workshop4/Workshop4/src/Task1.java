@@ -1,5 +1,12 @@
+//JAC444 2018 SUMMER, WORKSHOP 4
+//Student name: Youngmin Ko
+//Student #: 019155159
+
+// MK747: local file exist. No need to download from url link
+
+
 import java.io.*;
-import java.io.Serializable;
+import java.io.Serializable; // the key element of this lab
 import java.util.*;
 import java.util.regex.*;
 
@@ -107,9 +114,7 @@ public class Task1 implements Serializable
 
 		String rank = l[0];
 		String boyName = l[1];
-		String noOfBoys = l[2];
 		String girlName = l[3];
-		String noGirls = l[4];
 
 		// girls name
 		if (isFemale)
@@ -272,7 +277,7 @@ public class Task1 implements Serializable
 	    }
 
 	}
-	System.out.println("Goodbye!");
+	System.out.println("END OF PROGRAM. GOOD LUCK WITH YOUR NEW FAMILY!");
     }
 
 }
