@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/49869553/multi-client-simple-chatnon-gui-server-in-java-using-threads#new-answer
+
+https://github.com/nahales/JAC444-Java_Programming/tree/master/Workshop4
