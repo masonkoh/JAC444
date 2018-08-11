@@ -30,7 +30,7 @@ public class Client implements Runnable{
                     System.out.print("Enter you name: ");
                     ClientName = input.next();
                     ClientName += ": ";
-                    //QUERY PASSING
+                    // passing query
 
                     br = new BufferedReader(new InputStreamReader(System.in));
                     while (!SQL.equalsIgnoreCase("exit")) {

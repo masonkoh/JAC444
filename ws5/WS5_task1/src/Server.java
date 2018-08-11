@@ -1,23 +1,22 @@
 import java.io.IOException;
-import java.net.*;
 import java.util.Vector;
 import java.io.*;
 import java.util.*;
 import java.io.DataInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.time.LocalDateTime;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.text.*;
-import java.util.Scanner;
+//import java.net.*;
+//import java.time.LocalDateTime;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
+//import java.text.*;
+//import java.util.Scanner;
 
 
 
 public class Server {
     static Vector<Socket> ClientSockets;
     int clientCount = 0;
-    //int i = 0;
 
 
     Server() throws IOException {
@@ -36,10 +35,10 @@ public class Server {
                                     + client.getPort() + ",localport = " + client.getLocalPort() + "] at "
                                     + String.format("%tc", dNow));
                     System.out.println();
-                    //System.out.println(clientCount);
+
 
             }
-            //server.close();
+
     }
 
     public static void main(String[] args) throws IOException {
@@ -56,12 +55,10 @@ public class Server {
                     din = new DataInputStream(ClientSocket.getInputStream());
                     dout = new DataOutputStream(ClientSocket.getOutputStream());
 
-                    //String LoginName = din.readUTF();
-                    //i = clientCount;
+        
                     clientCount++;
                     ClientSockets.add(ClientSocket);
-                    //System.out.println(ClientSockets.elementAt(i));
-                    //System.out.println(ClientSockets.elementAt(1));
+
 
                     start();
             }
